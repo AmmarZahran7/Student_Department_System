@@ -1,0 +1,72 @@
+﻿@model Student
+@{
+    ViewBag.Title = "Update Std";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Update</title>
+    <link href="~/css/site.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <h1 class="alert alert-dark text-center">Update Student Info</h1>
+
+    <form method="post" class="row g-3">
+        <div class="col-md-6">
+            <label asp-for="Name" class="form-label"></label>
+            <input asp-for="Name" class="form-control">
+            <span asp-validation-for="Name"></span>
+
+        </div>
+        <div class="col-md-6">
+            <label asp-for="Address" class="form-label"></label>
+            <input asp-for="Address" class="form-control">
+            <span asp-validation-for="Address"></span>
+
+        </div>
+        <div class="col-md-12">
+            <label asp-for="Email" class="form-label"></label>
+            <input asp-for="Email" class="form-control">
+            <span asp-validation-for="Email"></span>
+
+        </div>
+        <div class="col-md-6">
+            <label asp-for="Password" class="form-label"></label>
+            <input asp-for="Password" class="form-control">
+            <span asp-validation-for="Password"></span>
+
+        </div>
+        <div class="col-md-6">
+            <label asp-for="Cpassword" class="form-label"></label>
+            <input asp-for="Cpassword" class="form-control">
+            <span asp-validation-for="Cpassword"></span>
+
+        </div>
+        <div class="col-md-6">
+            <label asp-for="Age" class="form-label"></label>
+            <input asp-for="Age" class="form-control">
+            <span asp-validation-for="Age"></span>
+
+        </div>
+        <div class="col-md-6">
+            <label asp-for="DeptId" class="form-label"></label>
+            <select asp-for="DeptId" asp-items="ViewBag.Depts" class="form-control">
+            </select>
+            <span asp-validation-for="DeptId"></span>
+        </div>
+        <div class="col-12">
+            <button type="submit" onclick="return confirm('Are You Sure')" class="btn btn-info">Edit</button>
+            <button type="reset" onclick="return confirm('Your Data Will Be Lost')" class="btn btn-warning">Reset</button>
+            <a href="/Students/Index" class="btn btn-primary"> Back</a>
+        </div>
+    </form>
+
+
+
+
+</body>
+</html>

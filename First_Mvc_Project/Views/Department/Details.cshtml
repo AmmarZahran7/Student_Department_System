@@ -1,0 +1,24 @@
+﻿@model Department
+@{
+    ViewBag.Title = "DeptInfo";
+
+}
+
+<!DOCTYPE html>
+<link href="~/css/site.css" rel="stylesheet" />
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <h1 class="alert alert-warning">
+ DeptInfo  (@Model.DeptId : @Model.DeptName :@Model.Address)
+    </h1>
+    <h1>
+        <a href="/Department/Index" class="btn btn-primary"> Back</a>
+    </h1>
+</body>
+</html>

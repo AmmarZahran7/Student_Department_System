@@ -1,0 +1,23 @@
+﻿@model Student
+@{
+    ViewBag.Title = "Std Info";
+}
+
+<!DOCTYPE html>
+<link href="~/css/site.css" rel="stylesheet" />
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <h1 class="alert alert-warning">
+       StdInfo  (@Model.Id : @Model.Name :@Model.Email : @Model.Address )  DeptInfo  (@Model.Department.DeptName :@Model.Department.Address)
+    </h1>
+    <h1>
+        <a href="/Students/Index" class="btn btn-primary"> Back</a>
+    </h1>
+</body>
+</html>

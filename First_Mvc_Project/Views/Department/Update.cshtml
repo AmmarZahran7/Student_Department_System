@@ -1,0 +1,43 @@
+﻿@model Department
+@{
+    ViewBag.Title = "Update Info";
+}
+
+<!DOCTYPE html>
+
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+    <link href="~/css/site.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <h1 class="alert alert-dark text-center">Update Department</h1>
+    <form method="post" class="row g-3">
+        <div class="col-md-6">
+            <label asp-for="DeptId" class="form-label"></label>
+            <input asp-for="DeptId" class="form-control">
+        </div>
+        <div class="col-md-6">
+            <label asp-for="DeptName" class="form-label"></label>
+            <input asp-for="DeptName" class="form-control">
+        </div>
+        <div class="col-12">
+            <label asp-for="Address" class="form-label"></label>
+            <input asp-for="Address" class="form-control">
+        </div>
+        <div class="col-12">
+            <button type="submit" onclick="return confirm('Are You Sure')" class="btn btn-info">Edit</button>
+            <button type="reset" onclick="return confirm('Your Data Will Be Lost')" class="btn btn-warning">Reset</button>
+            <a href="/Department/Index" class="btn btn-primary"> Back</a>
+        </div>
+
+    </form>
+
+   
+
+
+</body>
+</html>
